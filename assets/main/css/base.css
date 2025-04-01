@@ -115,7 +115,180 @@ nav ul li a:hover {
     text-align: center;
 }
 
-    width: 1000px;
-    color: #d4d4d4;
+.about_lyceum .about_desc {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding-bottom: 3%;
+}
+
+.container123 {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 50px auto;
+    gap: 100px;
+}
+
+.cards {
+    width: 30%;
+    background-color: green;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cards h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cards a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.discover-section {
+    padding: 20px;
+}
+
+.discover-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.discover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.discover-header h1 {
+    color: #2ecc71;
+    font-size: 2em;
+}
+
+.discover-header a {
+    color: #2ecc71;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.discover-content {
+    display: flex;
+}
+
+.text-list {
+    width: 35%;
+    padding-right: 20px;
+}
+
+.text-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-list li {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.image-carousel-container {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.image-carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-btn.prev {
+    left: 0;
+    z-index: 111;
+}
+
+.carousel-btn.next {
+    right: 0;
+    z-index: 111;
+}
+
+.footer {
+    background-color: #1bd61b; /* Yashil fon */
+    color: #fff; /* Oq matn */
+    padding: 2%;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    width: 25%;
+    padding: 2%;
+}
+
+.column h3 {
+    border-bottom: 1px solid #fff; /* Oq chiziq */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column li {
+    margin-bottom: 5px;
+}
+
+.column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.column a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
