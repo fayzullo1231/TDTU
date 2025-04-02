@@ -28,26 +28,16 @@
 
     <h2 class="text_new">Yangiliklar</h2>
     <div class="news-container slider">
-        <div class="news-item">
-            <img src="{% static 'main/image/carusel_imge_3.jpg' %}" alt="Yangilik 1">
-            <p class="news-title">Toshkent shahridagi Inha universitetida Navro’z bayrami bo’lib o’tdi</p>
-            <p>Mart 20, 2025</p>
+        {% for new in news %}
+
+            <div class="news-item">
+            <img src="{{ new.image.url }}" alt="Yangilik 1">
+            <p class="news-title">{{ new.title }}</p>
+            <p>{{ new.date }}</p>
         </div>
-        <div class="news-item">
-            <img src="{% static 'main/image/carusel_imge_3.jpg' %}" alt="Yangilik 2">
-            <p class="news-title">INHA & IT Park CUP Hackathon 2025</p>
-            <p>Mart 19, 2025</p>
-        </div>
-        <div class="news-item">
-            <img src="{% static 'main/image/carusel_imge_3.jpg' %}" alt="Yangilik 3">
-            <p class="news-title">INHA & IT Park CUP Hackathon 2025!</p>
-            <p>Mart 18, 2025</p>
-        </div>
-        <div class="news-item">
-            <img src="{% static 'main/image/carusel_imge_3.jpg' %}" alt="Yangilik 4">
-            <p class="news-title">📄 HUJJATLAR QABULI</p>
-            <p>Mart 17, 2025</p>
-        </div>
+
+        {% endfor %}
+
     </div>
 
     <div class="text_abouts">
@@ -96,16 +86,9 @@
                     <button class="carousel-btn prev">&lt;</button>
                     <div class="image-carousel">
                         <div class="image-container">
-                            <img src="{% static 'main/image/mirazam.jpg' %}" alt="Image 9">
-                            <img src="{% static 'main/image/diana_rider.jpg' %}" alt="Image 1">
-                            <img src="{% static 'main/image/eva_elfie.jpg' %}" alt="Image 2">
-                            <img src="{% static 'main/image/molliy_little.jpg' %}" alt="Image 3">
-                            <img src="{% static 'main/image/diana_rider.jpg' %}" alt="Image 4">
-                            <img src="{% static 'main/image/eva_elfie.jpg' %}" alt="Image 5">
-                            <img src="{% static 'main/image/molliy_little.jpg' %}" alt="Image 6">
-                            <img src="{% static 'main/image/diana_rider.jpg' %}" alt="Image 7">
-                            <img src="{% static 'main/image/eva_elfie.jpg' %}" alt="Image 8">
-                            <img src="{% static 'main/image/molliy_little.jpg' %}" alt="Image 9">
+                            {% for student in students %}
+                                <img src="{{ student.image.url }}" alt="Image {{ student.id }}">
+                            {% endfor %}
                         </div>
                     </div>
                     <button class="carousel-btn next">&gt;</button>

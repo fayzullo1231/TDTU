@@ -2,13 +2,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
+
 from tdtu_app.views import home_views, news_views, reception_online
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_views, name='home'),
-    path('news', news_views, name='news'),
-    path('reception-online', reception_online, name='reception-online'),
+    path('', include('tdtu_app.urls'))
 
 ]
 

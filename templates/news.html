@@ -6,51 +6,16 @@
 
     <div class="container mt-5 mb-5">
         <div class="row">
-            <div class="col-md-3 mb-5">
+            {% for new in news %}
+                <div class="col-md-3 mb-5">
                 <div class="card bg-green" style="width: 18rem">
-                    <img src="{% static 'main/image/molliy_little.jpg' %}" class="card-img-top" alt="...">
+                    <img src="{{ new.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <h3 class="card-text">{{ new.title }}</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem">
-                    <img src="{% static 'main/image/molliy_little.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem">
-                    <img src="{% static 'main/image/molliy_little.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem">
-                    <img src="{% static 'main/image/molliy_little.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem">
-                    <img src="{% static 'main/image/eva_elfie.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div style="text-align: center">

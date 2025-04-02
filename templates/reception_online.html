@@ -7,8 +7,8 @@
         <h1>Virtual qabulxona</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi delectus laudantium repellat vel
             veniam?</p>
-
-        <form>
+        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="fullname">To'liq ismi sharif:</label>
                 <input type="text" id="fullname" name="fullname">
@@ -53,8 +53,12 @@
                 <textarea id="xabar" name="xabar" rows="5"></textarea>
             </div>
 
-            <button type="submit">Yuborish</button>
-        </form>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="submit" value="Yuborish" class="btn btn-primary">
+                    <div class="submitting"></div>
+                </div>
+            </div>        </form>
     </div>
     <script src="{% static 'main/js/reception_online.js' %}"></script>
 {% endblock %}
