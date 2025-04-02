@@ -33,7 +33,7 @@ function updateImageContainer() {
 }
 
 nextButton.addEventListener('click', () => {
-    currentIndex = Math.min(currentIndex + 1, images.length - visibleImages);
+    currentIndex = Math.min(currentIndex + 2, images.length - visibleImages);
     updateImageContainer();
 });
 
@@ -41,3 +41,4 @@ prevButton.addEventListener('click', () => {
     currentIndex = Math.max(currentIndex - 1, 0);
     updateImageContainer();
 });
+

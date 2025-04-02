@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/reception_online.css' %}">
+    <div class="container_home">
+        <h1>Virtual qabulxona</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi delectus laudantium repellat vel
+            veniam?</p>
+
+        <form>
+            <div class="form-group">
+                <label for="fullname">To'liq ismi sharif:</label>
+                <input type="text" id="fullname" name="fullname">
+            </div>
+
+            <div class="form-group">
+                <label for="viloyat">Viloyat:</label>
+                <input type="text" id="viloyat" name="viloyat">
+            </div>
+
+            <div class="form-group">
+                <label for="tuman">Tuman (shahar):</label>
+                <input type="text" id="tuman" name="tuman">
+            </div>
+
+            <div class="form-group">
+                <label for="manzil">Manzil:</label>
+                <input type="text" id="manzil" name="manzil">
+            </div>
+
+            <div class="form-group">
+                <label for="yoshingiz">Yoshingiz:</label>
+                <input type="number" id="yoshingiz" name="yoshingiz" min="0" max="40">
+                <small>Yoshingiz 1-sonini 4-dan katta kirta olmaysiz 40-dan katta son kirita olmaysiz</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Elektron pochta:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="telraqam">Telefon raqami:</label>
+                <input type="text" id="raqamInput" name="raqam" maxlength="17" placeholder="+998 91 234 56 78"
+                       oninput="formatPhoneNumber(event)" value="+998">
+                <small>Iltimos, O'zbekiston telefon raqamini +998 bilan boshlab kiriting.</small>
+            </div>
+
+
+            <div class="form-group">
+                <label for="xabar">Xabar matni:</label>
+                <textarea id="xabar" name="xabar" rows="5"></textarea>
+            </div>
+
+            <button type="submit">Yuborish</button>
+        </form>
+    </div>
+    <script src="{% static 'main/js/reception_online.js' %}"></script>
+{% endblock %}
