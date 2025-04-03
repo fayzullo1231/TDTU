@@ -1,21 +1,34 @@
 $(document).ready(function () {
+    let totalSlides = $('.slider div').length; // Rasmlar sonini aniqlash
+
+    let slidesToScroll = 1; // Default qiymat
+
+    if (totalSlides > 6 && totalSlides <= 9) {
+        slidesToScroll = 2; // 6 tadan oshsa, 2tadan o'tadi
+    } else if (totalSlides > 9) {
+        slidesToScroll = 3; // 9 tadan oshsa, 3tadan o'tadi
+    }
+
     $('.slider').slick({
         dots: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 3,
+        speed: 550,
+        slidesToShow: 3, // Har doim 3 ta rasm ko‘rsatadi
+        slidesToScroll: slidesToScroll, // Dinamik ravishda belgilangan qiymat
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    slidesToScroll: 1 // Mobil versiyada 1tadan o'tadi
                 }
             }
         ]
     });
 });
+
 
 const imageContainer = document.querySelector('.image-container');
 const prevButton = document.querySelector('.carousel-btn.prev');

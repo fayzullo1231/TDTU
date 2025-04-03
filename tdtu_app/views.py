@@ -31,3 +31,9 @@ def reception_online(request):
         print(request.body)
         # Invites.objects.create()
     return render(request, 'reception_online.html')
+
+def student_views(request):
+    return render(request, 'students.html')
+
+def new_details(request):
+    return render(request, 'news_detail.html')

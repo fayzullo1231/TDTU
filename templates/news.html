@@ -4,20 +4,25 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'main/css/news.css' %}">
 
-    <div class="container mt-5 mb-5">
+    <div class="container mt-4 mb-4">
         <div class="row">
+            <!-- Har bir yangilik uchun kartalar -->
             {% for new in news %}
-                <div class="col-md-3 mb-5">
-                <div class="card bg-green" style="width: 18rem">
-                    <img src="{{ new.image.url }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-text">{{ new.title }}</h3>
+                <div class="col-md-3 mb-4">
+                    <div class="news-card">
+                        <img src="{{ new.image.url }}" alt="News Image">
+                        <div class="news-content">
+                            <div class="news-title">{{ new.title }}</div>
+                            <div class="news-date">{{ new.date|date:"F j, Y, H:i" }}</div>
+                            <div class="news-description">{{ new.description }}</div>
+                            <a href="#" class="news-btn">Batafsil</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
+
     <div style="text-align: center">
         <a style="color: #1e1f22;text-decoration: none" href=""><h1>ko'proq ></h1></a>
     </div>

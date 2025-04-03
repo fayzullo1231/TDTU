@@ -59,8 +59,8 @@ nav ul li a:hover {
 
 
 .footer {
-    background-color: #1bd61b; /* Yashil fon */
-    color: #fff; /* Oq matn */
+    background-color: #f0f8ff; /* Yashil fon */
+    color: #008000; /* Oq matn */
     padding: 2%;
     font-family: sans-serif;
 }
@@ -76,7 +76,7 @@ nav ul li a:hover {
 }
 
 .column h3 {
-    border-bottom: 1px solid #fff; /* Oq chiziq */
+    border-bottom: 1px solid #008000; /* Oq chiziq */
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -91,7 +91,7 @@ nav ul li a:hover {
 }
 
 .column a {
-    color: #fff;
+    color: #008000;
     text-decoration: none;
 }
 
