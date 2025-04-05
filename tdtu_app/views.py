@@ -1,16 +1,20 @@
 import json
 
 from django.shortcuts import render
-from .models import Students, News, Department, Invites
+from .models import Students, News, Department, Invites, Banners
 
 def home_views(request):
     news = News.objects.all()
     students = Students.objects.all()
+    banner = Banners.objects.filter(is_public=True)
+
 
     context = {
         'news': news,
         'students': students,
+        'banners': banner,
     }
+
     return render(request, 'home.html', context)
 
 def news_views(request):
@@ -33,10 +37,24 @@ def reception_online(request):
     return render(request, 'reception_online.html')
 
 def student_views(request):
-    return render(request, 'students.html')
+    students  = Students.objects.all()
+    context = {
+        'students': students,
+    }
+    return render(request, 'students.html', context)
 
-def new_details(request):
-    return render(request, 'news_detail.html')
+def new_details(request, id):
+    news = News.objects.get(id=id)
+    context = {
+        'news': news,
+    }
+
+    return render(request, 'news_detail.html', context)
 
 def information_views(request):
-    return render(request, 'information_tdtu.html')
+    department = Department.objects.all()
+    context = {
+        'department': department,
+    }
+    return render(request, 'information_tdtu.html', context)
+

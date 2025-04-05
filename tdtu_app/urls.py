@@ -6,6 +6,6 @@ urlpatterns = [
     path('news', news_views, name='news'),
     path('reception-online', reception_online, name='reception-online'),
     path('student', student_views, name='students'),
-    path('news/1', new_details, name='news_detail'),
+    path('news/<int:id>', new_details, name='news_detail'),
     path('information-tdtu', information_views, name='information-tdtu' ),
 ]

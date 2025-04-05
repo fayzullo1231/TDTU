@@ -6,12 +6,12 @@
 
     <div class="container">
         <div class="row ">
-            <h1 class="title_h1">🌙Eid al-Fitr Mubarak!</h1>
-            <p>POSTED ON </p>
-            <img src="{% static 'main/image/photo_5.jpg' %}" alt="" class="photo_1 col-md-6">
+            <h1 class="title_h1">{{ news.title }}</h1>
+            <p>POSTED ON    {{ news.date|date:"H:i" }}</p>
+            <img src="{{ news.image.url }}" alt="{{ news.id }}" class="photo_1 col-md-6">
             <div class="col-6">
-                <h2>Bu yerda matn bo'ladi...</h2>
-                <p class="col-md-6 desk">Bu yerda matn bo'ladi...</p>
+                <h2>{{ news.title }}</h2>
+                <p class="col-md-6 desk">{{ news.content }}</p>
             </div>
         </div>
     </div>

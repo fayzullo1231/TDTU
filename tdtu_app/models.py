@@ -47,6 +47,6 @@ class Banners(models.Model):
     is_public = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return self.image
+        return str(self.is_public)
 
 
