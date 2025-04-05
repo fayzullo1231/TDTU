@@ -7,7 +7,7 @@ from django.urls.conf import include
 from tdtu_app.views import home_views, news_views, reception_online
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('', include('tdtu_app.urls'))
 
 ]
