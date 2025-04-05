@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/information_tdtu.css' %}">
+
+    <div class="custom-container">
+        <h1 class="custom-title">Toshkent Davlat Texnika Universiteti qoshidagi akademik litsey</h1>
+        <p class="custom-description">
+            Toshkent Davlat Texnika Universiteti (TDTU) qoshidagi Akademik Litsey 1993-yilda tashkil etilgan bo‘lib,
+            yuqori sifatli ta’lim berishga ixtisoslashgan. Litsey bitiruvchilarining 90% dan ortig‘i respublika va
+            xorijdagi nufuzli oliy ta’lim muassasalariga qabul qilinadi.
+        </p>
+
+        <div class="custom-image-container">
+            <img src="{% static 'main/image/malumot.png' %}" alt="Litsey binosi">
+        </div>
+
+        <h2 class="custom-subtitle">TA'LIM YO'NALISHLARI</h2>
+        <h4 class="custom-subtitle_h4">🏛️ Kafedralar haqida</h4>
+        <p class="custom-description">Toshkent Davlat Texnika Universiteti huzuridagi akademik litseyda o‘quv jarayonini
+            yuqori saviyada tashkil etish maqsadida bir nechta ixtisoslashtirilgan kafedralar faoliyat yuritadi. Har bir
+            kafedra o‘z yo‘nalishiga mos fanlar bo‘yicha chuqurlashtirilgan bilim berishga qaratilgan.</p>
+
+        <h4 class="custom-subtitle_h4">📐 Matematika kafedrasi</h4>
+        <p>Matematika kafedrasi o‘quvchilarning mantiqiy fikrlash qobiliyatini rivojlantirish, murakkab masalalarni
+            tahlil qilish ko‘nikmalarini shakllantirishga xizmat qiladi. Kafedra pedagoglari OTM darajasidagi dars
+            metodikasidan foydalanadilar.</p>
+        <h4 class="custom-subtitle_h4">🔬 Fizika kafedrasi</h4>
+        <p>Fizika kafedrasi tabiiy fanlar asosida eksperimental va nazariy bilimlarni uyg‘unlashtirishga alohida e’tibor
+            qaratadi. Zamonaviy laboratoriyalar bilan jihozlangan sinf xonalari mavjud.</p>
+        <h4 class="custom-subtitle_h4">🌍 Xorijiy tillar kafedrasi</h4>
+        <p>Xorijiy tillar kafedrasi, xususan, ingliz tilini chuqurlashtirilgan holda o‘rgatib, o‘quvchilarning xalqaro
+            imtihonlarga tayyorgarligini ta’minlaydi. Darslar kommunikativ yondashuv asosida olib boriladi.</p>
+        <h4 class="custom-subtitle_h4">💻 Informatika kafedrasi</h4>
+        <p>Informatika kafedrasi zamonaviy dasturlash tillari, algoritmlar, axborot xavfsizligi va sun’iy intellekt
+            asoslarini o‘rgatadi. O‘quvchilarga amaliy loyihalar ustida ishlash imkoniyati beriladi.</p>
+        <h4 class="custom-subtitle_h4">🧠 Ijtimoiy-gumanitar fanlar kafedrasi</h4>
+        <p>Mazkur kafedra tarix, huquq, falsafa, milliy g‘oya va psixologiya fanlarini qamrab olib, o‘quvchilarning dunyoqarashini kengaytirish, axloqiy va fuqarolik ongini rivojlantirishga xizmat qiladi.</p>
+    </div>
+
+{% endblock %}

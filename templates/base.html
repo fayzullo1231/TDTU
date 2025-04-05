@@ -20,12 +20,14 @@
     <ul>
         <li><a href="{% url 'home' %}">LITSEY</a></li>
         <li><a href="{% url 'news' %}">YANGILIKLAR</a></li>
-        <li><a href="#">LITSEY HAQIDA MA'LUMOT</a></li>
+        <li><a href="{% url 'information-tdtu' %}">LITSEY HAQIDA MA'LUMOT</a></li>
         <li><a href="{% url 'students' %}">TALABALAR</a></li>
         <li><a href="#">ALOQA</a></li>
     </ul>
     <a href="{% url 'reception-online' %}" class="virtual-reception">Virtual Qabulxona</a>
 </nav>
+
+
 
 {% block content %}
 

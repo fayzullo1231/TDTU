@@ -37,3 +37,6 @@ def student_views(request):
 
 def new_details(request):
     return render(request, 'news_detail.html')
+
+def information_views(request):
+    return render(request, 'information_tdtu.html')

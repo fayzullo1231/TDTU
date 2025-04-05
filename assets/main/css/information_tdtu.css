@@ -1,0 +1,83 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Umumiy sahifa o'lchami */
+.custom-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Sarlavha */
+.custom-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3e8e41;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Matn */
+.custom-description {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+}
+
+/* Rasm joylashuvi */
+.custom-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.custom-image-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bo'lim sarlavhasi */
+.custom-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e8e41;
+    margin-top: 40px;
+}
+
+.custom-subtitle_h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e8e41;
+    margin-top: 20px;
+}
+
+/* Ro'yxat */
+.custom-list {
+    padding-left: 20px;
+    font-size: 18px;
+    color: #444;
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+}
+
+/* Mobil ekranlar uchun moslash */
+@media (max-width: 600px) {
+    .custom-title {
+        font-size: 26px;
+    }
+
+    .custom-description, .custom-list {
+        font-size: 16px;
+    }
+}
