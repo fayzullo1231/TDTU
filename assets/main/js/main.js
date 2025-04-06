@@ -55,3 +55,12 @@ prevButton.addEventListener('click', () => {
     updateImageContainer();
 });
 
+const video = document.getElementById('videoPlayer');
+
+function toggleVideo() {
+    if (video.paused) {
+        video.play();  // Video o'ynatish
+    } else {
+        video.pause();  // Video pauzaga qo'yish
+    }
+}

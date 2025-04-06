@@ -6,7 +6,6 @@
 
 .title_h1 {
     border-bottom: #3e8e41 3px solid;
-
 }
 
 .photo_1 {
@@ -14,8 +13,20 @@
     height: 650px;
     border-radius: 30px;
     margin-bottom: 2%;
+    object-fit: cover; /* Tasvirni to'liq joylashishini ta'minlash */
 }
 
 .desk {
     border-bottom: #3e8e41 solid 3px;
+    padding: 10px 0; /* Matnni yaxshiroq ajratish uchun */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-md-6 {
+    flex: 1; /* Har bir kolonna teng o'lchamda bo'ladi */
+    padding: 15px;
 }

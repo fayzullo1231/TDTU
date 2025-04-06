@@ -168,7 +168,11 @@
   color: #4b5563;
   margin-bottom: 20px;
   line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
+
 
 
 .news-container {

@@ -2,11 +2,11 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="true" data-bs-interval="2000">
         <div class="carousel-inner">
             {% for banner in banners %}
-                <div class="carousel-item active">
-                <img src="{{ banner.image.url }}" class="d-block w-100" alt="{{ banner.id }}">
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{{ banner.image.url }}" class="d-block w-100" alt="{{ banner.id }}">
                 </div>
             {% endfor %}
         </div>
@@ -27,25 +27,32 @@
         {% for new in news %}
 
             <div class="news-item">
-            <img src="{{ new.image.url }}" alt="Yangilik 1">
-            <p class="news-title">{{ new.title }}</p>
-            <p>{{ new.date }}</p>
-        </div>
+                <a href=""><img src="{{ new.image.url }}" alt="Yangilik 1"></a>
+                <p class="news-title">{{ new.title }}</p>
+                <p>{{ new.date }}</p>
+            </div>
 
         {% endfor %}
 
     </div>
 
-    <div class="text_abouts">
-        <div class="about_lyceum">
-            <h1 class="title_about">seks — ertadan boshlanadi</h1>
-            <p class="about_desc">Porno — bu erotik yoki jinsiy aloqani tasvirlovchi vizual, audio yoki yozma material
-                bo‘lib, insonlarning jinsiy
-                qiziqishini qo‘zg‘atish maqsadida yaratiladi. Porno sanoati global miqyosda milliardlab dollarlik biznes
-                hisoblanadi va internet orqali keng tarqalgan. Biroq, pornografiyaning haddan tashqari ko‘p iste’mol
-                qilinishi
-                psixologik va ijtimoiy muammolarga olib kelishi mumkin. Ba’zi mamlakatlar pornografiyani cheklaydi yoki
-                taqiqlaydi. Bundan tashqari, porno insonning jinsiy hayoti va munosabatlariga ta’sir qilishi mumkin.</p>
+    <div class="video-container">
+        <div class="video">
+            <!-- Video -->
+            <video id="videoPlayer" class="video" controls>
+                <source src="{% static 'main/image/video.MOV' %}" type="video/mp4">
+                Sizning brauzeringiz video tag'ini qo‘llab-quvvatlamaydi.
+            </video>
+        </div>
+        <div class="text">
+            <!-- Matn -->
+            <h5 class="title">Video Sarlavhasi</h5>
+            <p class="description">Bu yerda video haqida qo‘shimcha matn bo‘ladi. Videoni tomosha qilishdan keyin
+                izohlarni o‘qish mumkin.</p>
+            <!-- Play/Pause tugmasi -->
+            <button class="button" onclick="toggleVideo()">Play/Pause</button>
+
+            <!-- Container for cards -->
             <div class="container123">
                 <div class="cards">
                     <h2>Universitetga tashrif buyuring</h2>

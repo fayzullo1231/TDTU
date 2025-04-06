@@ -5,13 +5,19 @@
     <link rel="stylesheet" href="{% static 'main/css/news_detail.css' %}">
 
     <div class="container">
-        <div class="row ">
-            <h1 class="title_h1">{{ news.title }}</h1>
-            <p>POSTED ON    {{ news.date|date:"H:i" }}</p>
-            <img src="{{ news.image.url }}" alt="{{ news.id }}" class="photo_1 col-md-6">
-            <div class="col-6">
+        <div class="row">
+            <h1 class="title_h1 d-flex">{{ news.title }}</h1>
+            <p>POSTED ON {{ news.date|date:"H:i" }}</p>
+
+            <!-- Image Section -->
+            <div class="col-md-6">
+                <img src="{{ news.image.url }}" alt="{{ news.id }}" class="photo_1">
+            </div>
+
+            <!-- Text Section -->
+            <div class="col-md-6 m-2">
                 <h2>{{ news.title }}</h2>
-                <p class="col-md-6 desk">{{ news.content }}</p>
+                <p class="desk">{{ news.content }}</p>
             </div>
         </div>
     </div>
