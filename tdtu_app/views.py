@@ -1,21 +1,25 @@
 import json
 
 from django.shortcuts import render
-from .models import Students, News, Department, Invites, Banners, Statistical
+from .models import Students, News, Department, Invites, Banners, Statistical, Partner, AboutVideo
 from .but_func import send_channel_message
 
 def home_views(request):
     news = News.objects.all()
     students = Students.objects.all()
     banner = Banners.objects.filter(is_public=True)
+    partner = Partner.objects.all()
+    about = AboutVideo.objects.all().first()
+
 
 
     context = {
         'news': news,
         'students': students,
         'banners': banner,
+        'partner': partner,
+        'about': about,
     }
-
     return render(request, 'home.html', context)
 
 def news_views(request):

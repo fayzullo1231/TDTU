@@ -69,5 +69,28 @@ class Statistical(models.Model):
         return self.name
 
 
+class Partner(models.Model):
+    name = models.CharField(max_length=100)
+    logo = models.ImageField(upload_to="partners/")
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
 
 
+class AboutVideo(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    video = models.FileField(upload_to="videos/")
+
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+class Team(models.Model):
+    name = models.CharField(max_length=100)
+    url = models.URLField()
+
+    def __str__(self):
+        return self.name

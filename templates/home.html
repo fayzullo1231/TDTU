@@ -40,15 +40,14 @@
         <div class="video">
             <!-- Video -->
             <video id="videoPlayer" class="video" controls>
-                <source src="{% static 'main/image/video.MOV' %}" type="video/mp4">
+                <source src="{{ about.video.url }}" type="video/mp4">
                 Sizning brauzeringiz video tag'ini qo‘llab-quvvatlamaydi.
             </video>
         </div>
         <div class="text">
             <!-- Matn -->
-            <h5 class="title">Video Sarlavhasi</h5>
-            <p class="description">Bu yerda video haqida qo‘shimcha matn bo‘ladi. Videoni tomosha qilishdan keyin
-                izohlarni o‘qish mumkin.</p>
+            <h5 class="title">{{ about.title }}</h5>
+                <p class="description">{{ about.content }}</p>
             <!-- Play/Pause tugmasi -->
             <button class="button" onclick="toggleVideo()">Play/Pause</button>
 
@@ -69,7 +68,7 @@
     <section class="discover-section">
         <div class="discover-container">
             <div class="discover-header">
-                <h1>Discover</h1>
+                <h1>FAOL STUDENTLAR</h1>
                 <a href="/student">TO`LIQ →</a>
             </div>
 
@@ -99,5 +98,14 @@
             </div>
         </div>
     </section>
+    <h1 class="text_h1">HAMKOR TASHKILOTLAR</h1>
+    <div class="logos">
+        <div class="logo_items">
+            {% for part in partner %}
+                <a href=""> <img src="{{ part.logo }}" alt="{{ part.name }}"></a>
+            {% endfor %}
+        </div>
+    </div>
+
 
 {% endblock %}

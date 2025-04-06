@@ -9,7 +9,7 @@ CHANNEL_ID = '-1002530734318'
 
 def send_news_to_telegram(news):
     if news.for_telegram is True:
-        caption = f"🔷 <b>{news.title.upper()}</b>\n\n{news.content[:1000]}"
+        caption = f"🟢 <b>{news.title.upper()}</b>\n\n{news.content[:1000]}"
         payload = {
             'chat_id': CHANNEL_ID,
             'caption': caption,

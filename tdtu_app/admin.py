@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Banners, Students, Invites, Department, Statistical
+from .models import News, Banners, Students, Invites, Department, Statistical, Partner, AboutVideo, Team
 from .telegram_utils import send_news_to_telegram
 
 class NewsAdmin(admin.ModelAdmin):
@@ -11,8 +11,11 @@ class NewsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(News, NewsAdmin)
+admin.site.register(AboutVideo)
+admin.site.register(Partner)
 admin.site.register(Banners)
 admin.site.register(Students)
 admin.site.register(Invites)
 admin.site.register(Department)
 admin.site.register(Statistical)
+admin.site.register(Team)
