@@ -6,8 +6,16 @@ class News(models.Model):
     image = models.ImageField(upload_to="news/")
     date = models.DateTimeField(auto_now_add=True)
 
+    for_telegram = models.BooleanField(default=False)
+
     def __str__(self):
         return self.title
+
+    def save_news(self):
+        print(self.image)
+        self.save()
+
+
 
 class Invites(models.Model):
     full_name = models.CharField(max_length=100)
@@ -48,5 +56,18 @@ class Banners(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return str(self.is_public)
+
+class Statistical(models.Model):
+    name = models.CharField(max_length=100)
+    number = models.CharField(max_length=120)
+    year = models.IntegerField(default=0)
+    is_now = models.BooleanField(default=False)
+
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+
 
 

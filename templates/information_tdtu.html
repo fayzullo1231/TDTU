@@ -42,22 +42,10 @@
     <div class="stats-section" style="background-image: url({% static 'main/image/carusel_imge_1.jpg' %})">
         <div class="overlay"></div>
         <div class="stats-container">
-            <div class="stat-box"><span>1000+</span>
-                <p>Talabalar soni</p></div>
-            <div class="stat-box"><span>558+</span>
-                <p>Bitiruvchilar soni</p></div>
-            <div class="stat-box"><span>83%</span>
-                <p>Bitiruvchilarning ish bilan ta’minlanganligi</p></div>
-            <div class="stat-box"><span>30+</span>
-                <p>Malakali xorijiy professor-o‘qituvchilar soni</p></div>
-            <div class="stat-box"><span>250+</span>
-                <p>Ilmiy ishlar va patentlar soni</p></div>
-            <div class="stat-box"><span>150+</span>
-                <p>Taqdim etilgan grantlar soni</p></div>
-            <div class="stat-box"><span>80+</span>
-                <p>Hamkor tashkilotlar soni</p></div>
-            <div class="stat-box"><span>200+</span>
-                <p>O‘tkazilgan tadbirlar soni</p></div>
+            {% for stat in statistical %}
+                <div class="stat-box"><span>{{ stat.number }}</span>
+                    <p>{{ stat.name }}</p></div>
+            {% endfor %}
         </div>
     </div>
     <div class="custom-container">

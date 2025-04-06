@@ -27,7 +27,7 @@
         {% for new in news %}
 
             <div class="news-item">
-                <a href=""><img src="{{ new.image.url }}" alt="Yangilik 1"></a>
+                <a href="/news/{{ new.id }}"><img src="{{ new.image.url }}" alt="Yangilik 1"></a>
                 <p class="news-title">{{ new.title }}</p>
                 <p>{{ new.date }}</p>
             </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="cards">
                     <h2>Talabalarimiz safiga qo'shiling</h2>
-                    <p><a href="#">Ko'proq</a></p>
+                    <p><a href="/reception-online">Ko'proq ></a></p>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
         <div class="discover-container">
             <div class="discover-header">
                 <h1>Discover</h1>
-                <a href="#">TO`LIQ →</a>
+                <a href="/student">TO`LIQ →</a>
             </div>
 
             <div class="discover-content">

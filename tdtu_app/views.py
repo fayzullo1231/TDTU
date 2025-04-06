@@ -1,7 +1,8 @@
 import json
 
 from django.shortcuts import render
-from .models import Students, News, Department, Invites, Banners
+from .models import Students, News, Department, Invites, Banners, Statistical
+from .but_func import send_channel_message
 
 def home_views(request):
     news = News.objects.all()
@@ -26,13 +27,21 @@ def news_views(request):
 
 def reception_online(request):
     if request.method == "POST":
-        data = request.body
         obj = Invites.objects.create(full_name=request.POST['fullname'], email=request.POST['email'],
                                phone=request.POST['raqam'], location=request.POST['manzil'],
                                city=request.POST['viloyat'], district=request.POST['tuman'],
                                age=request.POST['yoshingiz'], message=request.POST['xabar'])
         obj.save()
-        print(request.body)
+        send_channel_message(f"ISM : {obj.full_name}\n"
+                              f" Email : {obj.email}\n"
+                              f" Nomer : {obj.phone}\n"
+                              f" Location : {obj.location}\n"
+                              f" City : {obj.city}\n"
+                              f" District : {obj.district}\n"
+                              f" Yosh : {obj.age}\n"
+                              f" Xabar : {obj.message}\n"
+                              )
+
         # Invites.objects.create()
     return render(request, 'reception_online.html')
 
@@ -53,8 +62,11 @@ def new_details(request, id):
 
 def information_views(request):
     department = Department.objects.all()
+    statistical = Statistical.objects.filter(is_now=True)
+
     context = {
         'department': department,
+        'statistical': statistical,
     }
     return render(request, 'information_tdtu.html', context)
 
