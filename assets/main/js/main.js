@@ -64,3 +64,14 @@ function toggleVideo() {
         video.pause();  // Video pauzaga qo'yish
     }
 }
+
+window.onload = function() {
+  const logoItems = document.querySelector('.logo_items');
+  const logos = logoItems.querySelectorAll('img');
+
+  // Logolarni avtomatik ravishda takrorlash
+  logos.forEach(logo => {
+    const clonedLogo = logo.cloneNode(true);  // Har bir logoni klonlash
+    logoItems.appendChild(clonedLogo);       // Takrorlangan logoni qo‘shish
+  });
+};
